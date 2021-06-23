@@ -42,12 +42,12 @@ data processing
 ### How to Import dataprobe and use it ?
 
 ```javascript
-const {functionName()} = require("dataprobe);
+const {functionName()} = require("dataprobe");
 const dataset = require("./filename");
 ```
 #### Example
 ```javascript
-const {datasetSize} = require("dataprobe);
+const {datasetSize} = require("dataprobe");
 const dataset = require("./supermarket.json");
 
 console.table(dataset);
