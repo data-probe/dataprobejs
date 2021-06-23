@@ -3,7 +3,7 @@
 This is a Javascript library for data exploration and analysis.
 It takes data input in JSON format and converts it into a tabular form
 in the node console. It has simple to use commands for manipulating and 
-playing around with the data table
+playing around with the data table.
 
 ### Installation
 
