@@ -1,0 +1,18 @@
+{
+  "name": "dataprobe",
+  "version": "1.0.3",
+  "description": "Javascript library for data analysis and exploration.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "data analysis",
+    "data mining",
+    "EDA",
+    "dataframes",
+    "data"
+  ],
+  "author": "gouravojha",
+  "license": "ISC"
+}
