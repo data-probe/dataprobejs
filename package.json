@@ -1,6 +1,6 @@
 {
   "name": "dataprobe",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Javascript library for data analysis and exploration.",
   "main": "index.js",
   "scripts": {
