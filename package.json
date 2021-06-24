@@ -14,5 +14,8 @@
     "data"
   ],
   "author": "gouravojha",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "csvtojson": "^2.0.10"
+  }
 }
