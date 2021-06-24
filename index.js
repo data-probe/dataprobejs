@@ -1,4 +1,11 @@
 const fs = require("fs");
+const { csvUpload } = require('./fileHandler.js');
+
+
+const csvHandler=(csvFile,jsonFile)=>{
+    csvUpload(csvFile,jsonFile);
+}
+
 // Drop a Column from the Dataset
 const deleteColumn = (dataset, key) => {
     for (let i = 0; i < dataset.length; i++) {
@@ -32,11 +39,11 @@ const dataSummary = (dataset) => {
 
 
 // Data Transform
-const columnEncoder = (dataset,columns) =>{
+const columnEncoder = (dataset, columns) => {
     var set = new Set(dataset.map(item => item[columns]))
     const arr = [...set]
-    for (let i = 0;i<dataset.length;i++){
-        if(arr.includes(dataset[i][columns])){
+    for (let i = 0; i < dataset.length; i++) {
+        if (arr.includes(dataset[i][columns])) {
             let temp = dataset[i][columns]
             dataset[i][columns] = arr.indexOf(temp)
         }
@@ -72,42 +79,42 @@ const columnsCorrelation = (X, Y) => {
             sum_X * sum_X) *
             (n * squareSum_Y -
                 sum_Y * sum_Y)));
-    return corr.toFixed(3);            
+    return corr.toFixed(3);
 }
 
 
 // Head and Tail 
-const dataHead = (dataset,num)=>{
+const dataHead = (dataset, num) => {
     const headDataset = []
-    for(let i =0;i<num;i++){
+    for (let i = 0; i < num; i++) {
         headDataset.push(dataset[i]);
     }
     return headDataset
 }
 
-const dataTail = (dataset,num)=>{
+const dataTail = (dataset, num) => {
     const rdataset = dataset.reverse()
     const tailDataset = []
-    for(let i =0;i<num;i++){
+    for (let i = 0; i < num; i++) {
         tailDataset.push(dataset[i]);
     }
     return tailDataset.reverse()
 }
 
 // Checks and counts the total number of  null values of a column 
-const checkNull = (dataset,column)=>{
+const checkNull = (dataset, column) => {
     let counter = 0
-    for(let i=0;i<dataset.length;i++){
-        if(!dataset[i][column]){
+    for (let i = 0; i < dataset.length; i++) {
+        if (!dataset[i][column]) {
             counter++
         }
     }
-    return counter 
+    return counter
 }
 
 // Save dataset to new json file
-const saveDataset = (dataset,filename)=>{
-    fs.writeFile(filename,JSON.stringify(dataset),"utf8",(err)=>{
+const saveDataset = (dataset, filename) => {
+    fs.writeFile(filename, JSON.stringify(dataset), "utf8", (err) => {
         console.log(err);
     });
 }
@@ -123,5 +130,6 @@ module.exports = {
     dataHead,
     dataTail,
     checkNull,
-    saveDataset
+    saveDataset,
+    csvHandler
 }

@@ -54,3 +54,7 @@ console.table(dataset);
 datasetSize(dataset);
 ```
 
+### Contributors
+
+* Anupam Dungdung
+* Gourav Ojha
