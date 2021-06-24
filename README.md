@@ -39,6 +39,8 @@ data processing
 
 * saveDataset(new_dataset,filename) - Takes two inputs, first the data and then the JSON filename of the where you want to store your new dataset in JSON format
 
+* csvHandler(csv_file_path,json_file) - Takes two inputs, first the absolute path to the CSV file and second the JSON filename to where you want to store the data in JSON format.
+
 ### How to Import dataprobe and use it ?
 
 ```javascript
