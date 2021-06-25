@@ -1,5 +1,6 @@
 const fs = require("fs");
 const csv = require('csvtojson')
+const p = require('phin')
 
 const csvUpload=(csvFilePath,jsonFilePath)=>{
     csv()
@@ -11,4 +12,11 @@ const csvUpload=(csvFilePath,jsonFilePath)=>{
     });
 }
 
-module.exports={csvUpload}
+const fetchData = async (link , filePath) => {
+    const res = await p(link)
+    fs.writeFile(filePath , res.body,(err)=>{
+        console.log(err);
+    });
+}
+
+module.exports={csvUpload , fetchData}
