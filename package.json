@@ -16,6 +16,7 @@
   "author": "gouravojha",
   "license": "ISC",
   "dependencies": {
-    "csvtojson": "^2.0.10"
+    "csvtojson": "^2.0.10",
+    "phin": "^3.6.0"
   }
 }

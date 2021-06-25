@@ -1,10 +1,15 @@
 const fs = require("fs");
-const { csvUpload } = require('./fileHandler.js');
+const { csvUpload , fetchData } = require('./fileHandler.js');
 
 
 const csvHandler=(csvFile,jsonFile)=>{
     csvUpload(csvFile,jsonFile);
 }
+
+const apiHandler=(link,jsonFile)=>{
+    fetchData(link,jsonFile);
+}
+
 
 // Drop a Column from the Dataset
 const deleteColumn = (dataset, key) => {
@@ -131,5 +136,6 @@ module.exports = {
     dataTail,
     checkNull,
     saveDataset,
-    csvHandler
+    csvHandler ,
+    apiHandler
 }
