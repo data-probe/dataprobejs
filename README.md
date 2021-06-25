@@ -41,6 +41,8 @@ data processing
 
 * csvHandler(csv_file_path,json_file) - Takes two inputs, first the absolute path to the CSV file and second the JSON filename to where you want to store the data in JSON format.
 
+* apiHandler(link,json_file) - This function helps users fetch data from an external api and save the api data in json format,which can be used for Data Analysis.
+
 ### How to Import dataprobe and use it ?
 
 ```javascript
@@ -60,3 +62,4 @@ datasetSize(dataset);
 
 * Anupam Dungdung
 * Gourav Ojha
+* Deepak Roul
